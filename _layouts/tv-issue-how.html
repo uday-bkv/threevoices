@@ -3,19 +3,33 @@ layout: tv-default
 ---
 {% assign issue = site.data.threevoices.issues | where: "slug", page.issue | first %}
 {% assign cases = site.data.threevoices.cases[page.issue] %}
-<header class="page-head">
-  <div class="eyebrow">Issue No. {{ issue.number }} · {{ issue.month }} · Implementation traces</div>
-  <h1>How it works</h1>
-  <p class="lede">Pick a scenario from the list. Its panel shows how the AI was put to work step by step, who checked it, and which real tools you could use to build something similar.</p>
-  <section class="role-key" aria-labelledby="role-key-title">
-    <h2 class="role-key-heading" id="role-key-title">Who acts at each step?</h2>
-    <ul class="role-key-list">
-      <li class="role-key-card r-person"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="person" %}</span><span><b>Person</b><small>Makes a request or takes action</small></span></li>
-      <li class="role-key-card r-ai"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="ai" %}</span><span><b>AI</b><small>Processes information or responds</small></span></li>
-      <li class="role-key-card r-expert"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="expert" %}</span><span><b>Expert</b><small>Reviews or guides the work</small></span></li>
-      <li class="role-key-card r-outcome"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="outcome" %}</span><span><b>Outcome</b><small>Shows what happened or was learned</small></span></li>
-    </ul>
-  </section>
+<header class="page-head how-page-head">
+  <div class="how-intro">
+    <div class="eyebrow">Issue No. {{ issue.number }} · {{ issue.month }} · Implementation traces</div>
+    <h1>How it works</h1>
+    <p class="lede">Choose a case to see the real-world journey, what the evidence says, and a practical route to a small prototype.</p>
+  </div>
+  <aside class="role-key" aria-label="Journey roles: Person, AI, and Expert">
+    <h2 class="role-key-heading">Journey roles</h2>
+    <div class="role-cycle">
+      <svg class="role-cycle-track" viewBox="0 0 200 160" aria-hidden="true" focusable="false">
+        <defs>
+          <marker id="cycle-arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto">
+            <path d="M0 0 L7 3.5 L0 7 Z" />
+          </marker>
+        </defs>
+        <path d="M112 17 C151 20 179 46 181 76" marker-end="url(#cycle-arrow)" />
+        <path d="M178 91 C168 125 141 144 108 146" marker-end="url(#cycle-arrow)" />
+        <path d="M91 145 C53 140 27 116 21 86" marker-end="url(#cycle-arrow)" />
+        <path d="M22 69 C31 39 57 20 88 17" marker-end="url(#cycle-arrow)" />
+      </svg>
+      <ul class="role-cycle-list">
+        <li class="role-cycle-person r-person"><span aria-hidden="true">{% include threevoices/actor-icon.html role="person" %}</span>Person</li>
+        <li class="role-cycle-ai r-ai"><span aria-hidden="true">{% include threevoices/actor-icon.html role="ai" %}</span>AI</li>
+        <li class="role-cycle-expert r-expert"><span aria-hidden="true">{% include threevoices/actor-icon.html role="expert" %}</span>Expert</li>
+      </ul>
+    </div>
+  </aside>
 </header>
 <div class="split">
   <div class="scen-list" role="tablist" aria-orientation="vertical" aria-label="Scenarios">

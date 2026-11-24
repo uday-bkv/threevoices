@@ -5,6 +5,11 @@ nav: about
 permalink: /about.html
 sitemap: true
 ---
+{% assign total_cases = 0 %}
+{% for issue in site.data.threevoices.issues %}
+  {% assign issue_cases = site.data.threevoices.cases[issue.slug] %}
+  {% assign total_cases = total_cases | plus: issue_cases.size %}
+{% endfor %}
 <header class="page-head">
   <div class="eyebrow">Method</div>
   <h1>About {{ site.threevoices.title }}</h1>
@@ -17,6 +22,7 @@ sitemap: true
 </div>
 <section class="home-sec">
   <h2 class="section-title">Three domains</h2>
+  <p class="domain-total">{{ total_cases }} voice-AI use cases across all published issues</p>
   <div class="areas">{% for cat in site.data.threevoices.categories %}{% if cat.home %}
     {% assign n = 0 %}{% for i in site.data.threevoices.issues %}{% for c in site.data.threevoices.cases[i.slug] %}{% if c.category contains cat.key %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% endfor %}
     <div class="area">
