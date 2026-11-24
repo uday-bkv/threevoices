@@ -1,0 +1,54 @@
+# Copy to _data/threevoices/cases/YYYY-MM.yml.
+# Each new issue has exactly nine entries: three per domain.
+# IDs c01-c03 = autism, c04-c06 = agriculture, c07-c09 = space.
+# Only include real use cases where speech input or spoken output is central, not an optional feature.
+# Give each case a trace.build_steps list with 4-6 {title, detail} implementation steps.
+- id: c01
+  category: [autism]            # one of: autism, agriculture, space
+  use_case: Short voice-AI use case label
+  new: true                     # reported in this issue's month
+  reported: 1 November 2026
+  place: Country
+  figure: "17"                  # the headline number shown in the margin
+  figure_note: what the number means
+  headline: A short sentence about the person and what changed
+  who: Who the person is
+  paragraphs:
+    - What happened, in plain words.
+  quote: ""                     # optional
+  care: ""                      # optional caveat shown as "Read with care"
+  stamp: News                   # source type: News, Peer-reviewed, University, Public body, Non-profit
+  links:
+    - label: Outlet name, date
+      url: https://example.org/story
+  trace:
+    title: Scenario title for How it works
+    area: Medical · Autism
+    summary: One sentence on how voice AI was used.
+    facts:
+      - { label: The problem, text: "..." }
+      - { label: AI used, text: "..." }
+      - { label: What goes in, text: "Describe the audio or spoken input." }
+      - { label: What comes out, text: "Describe the spoken response or other output." }
+      - { label: Who checks it, text: "..." }
+      - { label: How we know, text: "..." }
+    steps:                       # role: person, ai, expert or outcome
+      - { role: person, text: "..." }
+      - { role: ai, text: "..." }
+      - { role: expert, text: "..." }
+      - { role: outcome, text: "..." }
+    worked: Why it worked.
+    limits: What the evidence can't show.
+    sources:
+      - { label: Outlet, url: "https://example.org/story" }
+    clinical: false              # true adds the "learning prototype only" health note
+    tools:
+      - { label: Models, text: "..." }
+      - { label: Data, text: "..." }
+      - { label: Frameworks, text: "..." }
+      - { label: Interface, text: "..." }
+    build_steps:
+      - { title: Define the workflow, detail: "..." }
+      - { title: Build a small prototype, detail: "..." }
+      - { title: Test and review, detail: "..." }
+      - { title: Evaluate safely, detail: "..." }
