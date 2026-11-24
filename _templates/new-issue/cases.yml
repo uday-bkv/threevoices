@@ -39,6 +39,8 @@
       - { role: outcome, text: "..." }
     worked: Why it worked.
     limits: What the evidence can't show.
+    github_url: ""               # verified public repository URL, or leave blank for the placeholder
+    demo_url: ""                 # verified live demo or walkthrough URL, or leave blank
     sources:
       - { label: Outlet, url: "https://example.org/story" }
     clinical: false              # true adds the "learning prototype only" health note

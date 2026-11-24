@@ -3,12 +3,19 @@ layout: tv-default
 ---
 {% assign issue = site.data.threevoices.issues | where: "slug", page.issue | first %}
 {% assign cases = site.data.threevoices.cases[page.issue] %}
-{% include threevoices/issuebar.html %}
 <header class="page-head">
   <div class="eyebrow">Issue No. {{ issue.number }} · {{ issue.month }} · Implementation traces</div>
   <h1>How it works</h1>
   <p class="lede">Pick a scenario from the list. Its panel shows how the AI was put to work step by step, who checked it, and which real tools you could use to build something similar.</p>
-  <div class="legend"><span>Who acts at each step:</span><span class="role r-person">Person</span><span class="role r-ai">AI</span><span class="role r-expert">Expert</span><span class="role r-outcome">Outcome</span></div>
+  <section class="role-key" aria-labelledby="role-key-title">
+    <h2 class="role-key-heading" id="role-key-title">Who acts at each step?</h2>
+    <ul class="role-key-list">
+      <li class="role-key-card r-person"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="person" %}</span><span><b>Person</b><small>Makes a request or takes action</small></span></li>
+      <li class="role-key-card r-ai"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="ai" %}</span><span><b>AI</b><small>Processes information or responds</small></span></li>
+      <li class="role-key-card r-expert"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="expert" %}</span><span><b>Expert</b><small>Reviews or guides the work</small></span></li>
+      <li class="role-key-card r-outcome"><span class="role-key-icon" aria-hidden="true">{% include threevoices/actor-icon.html role="outcome" %}</span><span><b>Outcome</b><small>Shows what happened or was learned</small></span></li>
+    </ul>
+  </section>
 </header>
 <div class="split">
   <div class="scen-list" role="tablist" aria-orientation="vertical" aria-label="Scenarios">

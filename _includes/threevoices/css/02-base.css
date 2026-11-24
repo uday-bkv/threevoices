@@ -37,5 +37,3 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 7vw
 .btn.ghost:hover { background: var(--accent-soft); }
 
 /* Link back to the main site from the GitHub Pages project site. */
-.site-nav a.tv-back { padding-left: 22px; border-left: 1px solid currentColor; border-bottom-color: transparent; opacity: .8; }
-.site-nav a.tv-back:hover { opacity: 1; }

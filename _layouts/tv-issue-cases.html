@@ -3,7 +3,6 @@ layout: tv-default
 ---
 {% assign issue = site.data.threevoices.issues | where: "slug", page.issue | first %}
 {% assign cases = site.data.threevoices.cases[page.issue] %}
-{% include threevoices/issuebar.html %}
 <header class="page-head">
   <div class="eyebrow">Issue No. {{ issue.number }} · {{ issue.month }}</div>
   <h1>{{ issue.title }}</h1>

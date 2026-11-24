@@ -12,7 +12,9 @@
   who: Three autistic young adults in an intensive vocational internship program
   paragraphs:
     - >-
-      Researchers evaluated Noora, an AI conversational training tool, with three autistic young adults in a vocational internship program. Participants practised emotionally responsive verbal communication and received real-time AI feedback. Human-delivered conversation probes used workplace-relevant scenarios to check performance before, during, and after training. The researchers reported immediate improvements for all three participants, including in generalization and retention probes.
+      A workplace conversation can move quickly. In a vocational internship study, three autistic young adults used Noora to practise responding to workplace-relevant prompts and received feedback as they went.
+    - >-
+      To see whether practice carried over, researchers also used conversations led by people before, during and after training. All three participants showed immediate improvements, including in generalization and retention probes. This small study does not show that an AI coach can replace a person.
   quote: ""
   care: This was a three-participant multiple-baseline study, not a large randomized trial. It does not establish that an AI coach replaces an employment specialist or clinician.
   stamp: Peer-reviewed
@@ -40,6 +42,8 @@
       - { role: outcome, text: "All three participants showed immediate improvements in emotionally responsive verbal communication in the study." }
     worked: Practice was linked to workplace-relevant scenarios, and the researchers checked for generalization using human-delivered probes rather than relying only on app scores.
     limits: Small single-case study; the paper does not establish long-term employment outcomes or effectiveness for all autistic people.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: Springer Nature study, url: "https://link.springer.com/article/10.1007/s10803-026-07313-4" }
       - { label: PsyPost report on Noora studies and spoken replies, url: "https://www.psypost.org/stanford-scientists-ai-chatbot-helps-autistic-adults-improve-face-to-face-communication-studies-show/" }
@@ -67,7 +71,9 @@
   who: Stanford researchers and families of 58 children contributing recordings through the Guess What? mobile game
   paragraphs:
     - >-
-      A Stanford research team compared machine-learning approaches for identifying autism-related patterns in child speech recorded at home. The dataset included 58 children (20 autistic and 38 neurotypical), with cellphone-recorded audio collected through the Guess What? mobile game. Researchers compared random forests built from audio features, a convolutional neural network on spectrograms, and fine-tuned wav2vec 2.0. In five-fold cross-validation, the convolutional network had the highest reported accuracy, 79%, for distinguishing the study's autism and neurotypical labels.
+      Families took part in a mobile game called Guess What?, which captured children's speech at home. Researchers later studied whether machine-learning systems could find patterns in those recordings.
+    - >-
+      The dataset included 58 children: 20 autistic and 38 neurotypical. The team compared three modelling approaches, and the best result was 79% accuracy in five-fold cross-validation. That is an early research result on this dataset, not a diagnostic test or proof the model will work for other families.
   quote: ""
   care: This was a research model evaluated on a small collected dataset, not a diagnostic service. The study included 20 autistic children and 38 neurotypical children, with a sex imbalance between groups; cross-validation does not show how a system would perform in a different population or clinical setting.
   stamp: Peer-reviewed
@@ -94,6 +100,8 @@
       - { role: outcome, text: "The study reports a highest accuracy of 79% for its CNN model, without establishing clinical readiness." }
     worked: The study used ordinary cellphone recordings rather than specialized recording equipment and compared several audio-model approaches.
     limits: Dataset cross-validation can overstate performance on new families; the paper does not establish a safe stand-alone screening or diagnostic tool.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: JMIR article, url: "https://pediatrics.jmir.org/2022/2/e35406" }
       - { label: PubMed Central full text, url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9052034/" }
@@ -121,7 +129,9 @@
   who: Researchers developing a machine-learning assessment framework using the Indian Scale for Assessment of Autism
   paragraphs:
     - >-
-      A Springer book chapter describes a machine-learning framework for analysing children's vocal responses against speech-language and communication criteria in the Indian Scale for Assessment of Autism. The authors report recording audio-visual responses from 82 children with autism in supervised, computer-based sessions. The work is research into supporting structured assessment; it does not establish a clinically approved automated diagnosis.
+      In supervised, computer-based sessions, researchers recorded audio-visual responses from 82 autistic children. A research framework then explored how machine learning might analyse those vocal responses using communication criteria from the Indian Scale for Assessment of Autism.
+    - >-
+      The goal was to study whether technology could support structured assessment. The chapter describes research, not a clinically approved automated diagnosis, and a qualified professional remains essential to interpreting a child's communication.
   quote: ""
   care: The source describes a research framework and a supervised sample. Do not treat its model output as a diagnosis or infer general performance beyond the reported study.
   stamp: Research
@@ -148,6 +158,8 @@
       - { role: outcome, text: "The chapter presents a machine-learning research approach, not a replacement for clinical assessment." }
     worked: Structured prompts and supervised recording give researchers a repeatable setting for studying vocal responses.
     limits: The chapter does not demonstrate autonomous diagnosis or establish performance across settings, languages, or unsupervised recordings.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: Springer Nature chapter, url: "https://link.springer.com/chapter/10.1007/978-3-031-48309-7_41" }
       - { label: Crossref bibliographic record, url: "https://api.crossref.org/works/10.1007/978-3-031-48309-7_41" }
@@ -175,7 +187,9 @@
   who: Crop2Cash's FarmAdvice service as described in an IndiaAI use-case record
   paragraphs:
     - >-
-      An IndiaAI use-case record describes FarmAdvice as an IVR-based generative-AI advisory for Nigerian smallholder farmers. Farmers ask questions by voice in local dialects; the listing says the service transcribes the audio and returns contextual agricultural guidance grounded in an agronomy knowledge base. The listing reports a scaled service, but its user and performance figures are platform-reported rather than independently evaluated in the material reviewed here.
+      When a farmer needs crop information, a phone call may be easier than an app or a printed guide. An IndiaAI project listing describes FarmAdvice as a service Nigerian smallholders can call and speak to in local dialects.
+    - >-
+      According to the listing, the system transcribes the question and uses an agronomy knowledge base to prepare contextual guidance. The page describes the service as scaled, but its user and performance figures have not been independently evaluated in the material reviewed here.
   quote: ""
   care: The IndiaAI page is a project description, not an independent evaluation. Treat its user counts, model-accuracy figures, and impact statements as unverified platform claims.
   stamp: Public body
@@ -201,6 +215,8 @@
       - { role: outcome, text: "The use case offers phone-based access to local-language agricultural information, with impact claims still requiring independent evaluation." }
     worked: Phone-based voice access can reduce dependence on reading and smartphone data plans, while retrieval from an agronomy knowledge base can constrain advice.
     limits: The source is a platform listing; no independent study confirming reported adoption, accuracy, or farm outcomes was located.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: IndiaAI FarmAdvice listing, url: "https://aikosh.indiaai.gov.in/home/use-cases/details/farmadvice_closing_the_1_50_000_extension_gap_via_voice_first_ai_advisory.html" }
     clinical: false
@@ -227,7 +243,9 @@
   who: IFPRI and Farm Radio International, working on low-resource African-language speech recognition
   paragraphs:
     - >-
-      IFPRI and Farm Radio International developed Longa to transcribe, translate, and analyse farmers' voice messages from interactive radio projects. The work targets Luganda, primarily spoken in Uganda, and Bambara, primarily spoken in Mali. The partners say the tool can help programme teams make better use of farmer feedback that would otherwise be difficult to analyse at scale. CGIAR reports a 10% improvement over existing speech-recognition models for Luganda radio speech; this is a technical result, not a measured increase in farm yields or income.
+      A farmer shares feedback with a radio programme in a voice message. For teams receiving many messages in languages that are difficult for standard speech tools, listening and sorting every recording can take time.
+    - >-
+      IFPRI and Farm Radio International developed Longa to transcribe, translate and analyse messages in Luganda, used mainly in Uganda, and Bambara, used mainly in Mali. CGIAR reports a 10% improvement over existing speech-recognition models for Luganda radio speech. That is a reported technical result, not evidence of increased yields or income.
   quote: ""
   care: The reported improvement is from the project announcement; the page does not provide a test-set description or independently replicated result. Longa analyses feedback and is not itself a crop-advice authority.
   stamp: Research · Public body
@@ -252,6 +270,8 @@
       - { role: outcome, text: "Radio teams can use the resulting themes to improve agricultural programming and advisory content." }
     worked: The system targets real farmer voice messages and local-language radio audio rather than assuming clean, standard-accent speech.
     limits: The published announcement describes the tool and a reported speech-recognition improvement but does not establish downstream farming outcomes.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: CGIAR / IFPRI / Farm Radio International, url: "https://www.cgiar.org/news-events/news/ifpri-and-farm-radio-international-collaborate-give-voice-most-vulnerable-farmers" }
     clinical: false
@@ -278,7 +298,9 @@
   who: DataSync Africa and the farmers and agricultural organizations it says the product is designed to serve
   paragraphs:
     - >-
-      A September partner announcement in TechCabal says DataSync Africa launched AGROSYNC Conversational Voice AI to let farmers access agricultural information through natural voice interaction and receive advisories in Yoruba. The announcement describes the capability and intended audience, but does not publish an independent evaluation, user count, or measured farm outcome.
+      A farmer who would rather speak than type could ask a question in Yoruba. A September partner announcement says DataSync Africa launched AGROSYNC Conversational Voice AI to offer farmers voice access to agricultural information and advisories in Yoruba.
+    - >-
+      The announcement explains the intended service, but it does not include an independent evaluation, a user count or measured farm outcomes. Its real-world accuracy and impact therefore remain unknown.
   quote: ""
   care: This is a partner announcement about a product launch, not an independent test of accuracy, availability, or farmer impact.
   stamp: News · Partner announcement
@@ -303,6 +325,8 @@
       - { role: outcome, text: "The launch aims to make agricultural information accessible through Yoruba voice interaction; effectiveness remains unmeasured in the source." }
     worked: A local-language voice channel can reduce the literacy and language barriers of typed advisory services.
     limits: The only source reviewed is a partner announcement; the technical stack, deployment scale, and independent results are not established.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: TechCabal Partner announcement, url: "https://techcabal.com/2026/09/15/datasync-africa-launches-agrosync-yoruba-conversational-voice-ai-for-farmers/" }
     clinical: false
@@ -329,7 +353,9 @@
   who: ESA astronaut Alexander Gerst and the DLR, Airbus, IBM, and LMU project teams
   paragraphs:
     - >-
-      CIMON was a free-flying astronaut assistant tested in the European Columbus module on the International Space Station during the Horizons mission. ESA's video documents successful commissioning and Alexander Gerst's first interactions with it, including help with a procedure; DLR describes voice-controlled access to documents and media. IBM Watson provided speech-understanding AI, while Airbus supplied autonomous navigation and object recognition. It was a technology demonstrator, not a general-purpose autonomous flight operator, and no performance results are reported.
+      During the Horizons mission, astronaut Alexander Gerst met CIMON, a free-flying assistant tested in the space station's European Columbus module. ESA's video shows their first interactions, including CIMON helping with a procedure. DLR says astronauts could use voice to access documents and media.
+    - >-
+      Different teams supplied different parts: IBM Watson handled speech understanding, while Airbus provided navigation and object recognition. CIMON was a technology demonstration, not an autonomous flight operator, and the sources report no performance score.
   quote: ""
   care: DLR describes a technology demonstrator and its intended functions. Do not interpret the assistant as authorized to make safety-critical decisions or operate spacecraft systems without crew oversight.
   stamp: Public body
@@ -359,6 +385,8 @@
       - { role: outcome, text: "The commissioning demonstrated voice interaction in orbit; sources report no operational safety-performance metric." }
     worked: Speech access and a mobile display allow an astronaut to retrieve documents without stopping a hands-on task.
     limits: Technology demonstration only; the page does not establish the reliability needed for unsupervised or safety-critical procedure execution.
+    github_url: ""
+    demo_url: "https://www.esa.int/media/horizons-science-cimon"
     sources:
       - { label: DLR news, url: "https://www.dlr.de/en/latest/news/2018/1/20180302_cimon-the-intelligent-astronaut-assistant_26307" }
       - { label: DLR project page, url: "https://www.dlr.de/en/research-and-transfer/projects-and-missions/horizons/cimon" }
@@ -387,7 +415,9 @@
   who: Axiom Space and private astronaut mission crews on Ax-2 and Ax-3
   paragraphs:
     - >-
-      Axiom Space describes a Digital Voice Assistant investigation intended to support crew operations on the International Space Station and inform a future smart-spacecraft ecosystem. The project record describes evaluation through private astronaut missions Ax-2 and Ax-3 and captions an Ax-3 photo as an Amazon Echo technology demonstration. The described device connects over the station network to a cloud service, and its operating time and location are constrained to address crew privacy and awareness. The page does not publish a measured outcome or enough detail to identify the assistant's AI model.
+      What might a voice assistant do for astronauts at work? Axiom Space describes an investigation exploring voice support for station tasks and a future smart-spacecraft ecosystem. Its project record covers evaluations on private astronaut missions Ax-2 and Ax-3, and labels an Ax-3 photo as an Amazon Echo demonstration.
+    - >-
+      The device described connects through the station network to a cloud service. Its use is limited by time and location to account for crew privacy and awareness. Axiom does not report a measured outcome or identify the assistant's AI model.
   quote: ""
   care: The project page describes an investigation and planned evaluation, not a validated operational assistant. The cloud connection and privacy constraints are important design limitations for future missions.
   stamp: Organization
@@ -413,6 +443,8 @@
       - { role: outcome, text: "The investigation explores station-task support, but the project page reports no measured effectiveness." }
     worked: The investigation explicitly treats privacy and crew awareness as operational requirements rather than assuming an always-listening assistant is acceptable.
     limits: Public material does not identify the model, task-level accuracy, or operational benefit; cloud connectivity may not suit deep-space missions.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: Axiom Space DVA project page, url: "https://www.axiomspace.com/research/digital-voice-assistant" }
     clinical: false
@@ -439,7 +471,9 @@
   who: German Aerospace Center and European Space Agency researchers, with University of Washington collaborators
   paragraphs:
     - >-
-      Researchers describe CORE, an intelligent assistant prototype for astronaut procedures. Their initial experiments indexed ten publicly available procedures and combined Whisper speech recognition, GPT-4 retrieval-augmented generation, and ArangoDB/Elasticsearch data stores. In tests, the system returned procedure steps in response to spoken questions; the broader design proposes offline operation and augmented-reality cues. It was not tested in space, and the paper reports no quantified performance score.
+      Imagine asking a question aloud instead of searching through a long procedure document. Researchers built CORE, a voice-enabled prototype that tries to answer questions about astronaut procedures. In its first experiments, it indexed ten public procedures and returned procedure steps in response to spoken questions.
+    - >-
+      The prototype combined Whisper speech recognition with GPT-4 retrieval and ArangoDB/Elasticsearch data stores. Its broader design proposes offline use and augmented-reality cues, but CORE was not tested in space and the paper reports no quantified performance score.
   quote: ""
   care: This is an early research prototype reported in an ESA SPAICE 2024 conference paper, not evidence of an operational or flight-tested assistant. Procedure answers would require validation against controlled source documents.
   stamp: Research
@@ -467,6 +501,8 @@
       - { role: outcome, text: "The paper reports initial prototype experiments, not an in-flight deployment or a quantified performance evaluation." }
     worked: The prototype combined speech recognition with retrieval from a bounded collection of procedure documents and related graph data.
     limits: No flight deployment or quantified safety evaluation is reported; AI-generated procedure guidance must not replace approved checklists or crew judgment.
+    github_url: ""
+    demo_url: ""
     sources:
       - { label: arXiv paper, url: "https://arxiv.org/abs/2409.14206" }
       - { label: CORE full text, url: "https://arxiv.org/html/2409.14206v1" }

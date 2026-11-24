@@ -7,12 +7,12 @@
     <h2>{{ t.title }}</h2>
     <p class="summary">{{ t.summary }}</p>
   </div>
-  <div><h3>At a glance</h3>
-    <dl class="facts">{% for f in t.facts %}<div><dt>{{ f.label }}</dt><dd>{{ f.text }}</dd></div>{% endfor %}</dl>
+  <div class="at-a-glance"><h3>At a glance</h3>
+    <dl class="facts">{% for f in t.facts %}<div class="fact-card"><dt><span class="fact-number" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>{{ f.label }}</dt><dd>{{ f.text }}</dd></div>{% endfor %}</dl>
   </div>
   <div><h3>Step by step</h3>
     <ol class="steps">{% for s in t.steps %}
-      <li class="r-{{ s.role }}"><span class="dot" aria-hidden="true"></span><div class="body"><span class="role">{% case s.role %}{% when 'ai' %}AI{% when 'person' %}Person{% when 'expert' %}Expert{% else %}Outcome{% endcase %}</span><p class="step-text">{{ s.text }}</p></div></li>{% endfor %}
+      <li class="r-{{ s.role }}"><span class="actor-step-icon" aria-hidden="true">{% include threevoices/actor-icon.html role=s.role %}</span><div class="body"><span class="role">{% case s.role %}{% when 'ai' %}AI{% when 'person' %}Person{% when 'expert' %}Expert{% else %}Outcome{% endcase %}</span><p class="step-text">{{ s.text }}</p></div></li>{% endfor %}
     </ol>
   </div>
   <div class="twocol">
@@ -28,5 +28,12 @@
     <ol>{% for step in t.build_steps %}<li><b>{{ step.title }}</b><p>{{ step.detail }}</p></li>{% endfor %}</ol>
   </div>
   {% endif %}
+  <div class="project-links">
+    <h3>Project links</h3>
+    <div class="project-link-grid">
+      {% if t.github_url and t.github_url != "" %}<a href="{{ t.github_url }}" target="_blank" rel="noopener">GitHub repository ↗</a>{% else %}<span><b>GitHub repository</b><small>Link to be added</small></span>{% endif %}
+      {% if t.demo_url and t.demo_url != "" %}<a href="{{ t.demo_url }}" target="_blank" rel="noopener">Demo or walkthrough ↗</a>{% else %}<span><b>Demo or walkthrough</b><small>Add a link if available</small></span>{% endif %}
+    </div>
+  </div>
   <div class="foot"><span class="stamp">Sources</span>{% for l in t.sources %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}<a class="howlink" href="cases.html#{{ c.id }}">Read the full case →</a></div>
 </section>

@@ -12,7 +12,8 @@
   headline: Autistic teens and adults practised empathetic replies with a chatbot coach
   who: 30 autistic people aged 11 to 35 in a Stanford randomised trial, and 3 young adults on a hospital internship
   paragraphs:
-  - Noora, built by a Stanford team led by Lynn Kern Koegel with computer scientist Monica Lam's group, shows a short statement, such as someone complaining about a stressful job. The user says whether it is positive, negative or neutral, then replies by voice or text and gets instant feedback, with a better reply to try when needed. In a randomised trial, people who practised for about four weeks raised their rate of appropriate empathetic responses in real video conversations from about 17% to 51%, while the waitlist group barely changed. In a separate workplace study, three interns also improved in unprompted conversations with job coaches.
+  - Imagine rehearsing a tricky conversation before it happens. Noora gives a short prompt, such as a colleague describing a stressful day. The learner identifies its tone, then practises a reply by speaking or typing. Noora gives immediate feedback and, when useful, suggests another response to try.
+  - In a randomised trial, participants practised for about four weeks. Their appropriate empathetic replies in real video conversations rose from about 17% to 51%, while the waitlist group changed little. In a separate workplace study, three interns also improved in unprompted conversations with job coaches.
   quote: “Noora was not designed to be a ‘friend’ replacement.” Lynn Kern Koegel
   care: The trial compared Noora with a waitlist, not with human-led therapy, and the workplace study had three people. Long-term effects aren't known.
   stamp: Peer-reviewed · News
@@ -51,6 +52,8 @@
       text: Appropriate empathetic replies in real conversations rose from about 17% to 51%. 71% of users improved and 67% enjoyed it.
     worked: Keeping prompts scripted and verified avoids the risks of open-ended chat, and voice input let users practise the way they actually talk.
     limits: Compared only with a waitlist, small samples, and long-term effects unmeasured.
+    github_url: ""
+    demo_url: ""
     sources:
     - label: PsyPost
       url: https://www.psypost.org/stanford-scientists-ai-chatbot-helps-autistic-adults-improve-face-to-face-communication-studies-show/
@@ -78,7 +81,8 @@
   headline: Australian farmers started doing their paperwork by voice note from the paddock
   who: Andrew Gill, a cotton, beef and sheep producer in central-west New South Wales, and other farms in a co-operative trial
   paragraphs:
-  - Regen Farmers Mutual, a farmer-owned co-operative, is piloting a conversational assistant on 20 farms. Farmers record work as they go by voice note, photo or text, in the paddock, on machinery or in the livestock yards. The assistant updates the farm's records and prepares the paperwork, such as treatment records and stock inventory after a livestock treatment, so nothing has to be typed up at night. It learns each farm's own words for paddocks, mobs and staff shorthand, and connects to existing farm software, weather and machinery data. Andrew Gill uses it to track which paddocks his sheep are in and compares that with satellite imagery to estimate how much feed is left.
+  - A farm day rarely ends when the work is done: records still need to be written up. Regen Farmers Mutual is testing a conversational assistant on 20 farms so people can log jobs as they happen, using a voice note, photo or text from the paddock, machinery or livestock yards.
+  - The assistant turns those updates into records and draft paperwork, learning each farm's names for paddocks, mobs and staff shorthand. Farmer Andrew Gill, for example, tracks where his sheep are and compares that information with satellite imagery to estimate remaining feed. The pilot has not yet reported measured time savings.
   quote: “For a lot of farming families, paperwork happens after the day's actual farming is finished.” Christophe Bur, co-director
   care: An early pilot with no measured results yet, such as hours saved.
   stamp: News
@@ -115,6 +119,8 @@
       text: Records are kept as work happens. Andrew Gill matches sheep movements with satellite imagery to estimate feed.
     worked: It fits the farm day instead of adding screen time, and adapts to each farm's vocabulary.
     limits: An early pilot with no measured savings yet.
+    github_url: ""
+    demo_url: ""
     sources:
     - label: IT Brief Australia
       url: https://itbrief.com.au/story/australian-farms-test-ai-assistant-to-cut-paperwork
@@ -140,7 +146,8 @@
   headline: NASA is building a talking medical assistant for crews far from a doctor
   who: Future crews on long missions, reported as SpaceX Crew‑13 launched to the space station on 1 October
   paragraphs:
-  - On long missions, crews may not reach a doctor on Earth in time. NASA's Human Research Program, working with Google, is developing the Crew Medical Officer Digital Assistant. An astronaut can describe symptoms by voice or text and add images, and it returns a structured assessment with possible diagnoses and treatment guidance. In physician-graded test cases it was 88% accurate for ankle injuries, 80% for ear pain and 74% for flank pain. NASA keeps ownership of the source code.
+  - Far from Earth, a crew may need medical guidance before a doctor can respond. NASA's Human Research Program and Google are developing the Crew Medical Officer Digital Assistant to explore that challenge.
+  - In the proposed workflow, an astronaut describes symptoms by voice or text and can add an image. The assistant returns a structured assessment with possible diagnoses and treatment guidance. In simulated, physician-graded cases, reported accuracy was 88% for ankle injuries, 80% for ear pain and 74% for flank pain. These results do not make it a flight-ready medical device.
   quote: ''
   care: It is not a cleared medical device, and NASA has announced no date for using it in flight. The accuracy figures come from simulated exam cases.
   stamp: News
@@ -179,6 +186,8 @@
       text: 88% accuracy for ankle injuries, 80% for ear pain and 74% for flank pain in testing.
     worked: Accepting voice, text and images lets an astronaut describe a problem naturally, without medical vocabulary.
     limits: Simulated cases only, not a cleared device, and no deployment date.
+    github_url: ""
+    demo_url: ""
     sources:
     - label: Travelers Today
       url: https://www.travelerstoday.com/articles/61069/20261002/spacex-crew-13-sets-us-speed-record-while-bringing-ai-diagnostic-tools-space-station.htm
