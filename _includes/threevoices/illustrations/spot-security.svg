@@ -1,0 +1,8 @@
+<svg class="ill" viewBox="0 0 220 150" role="img" aria-label="Voice security shield and waveform">
+  <rect class="bg" x="18" y="18" width="184" height="114" rx="16"/>
+  <path class="acc" d="M110 31l46 17v29c0 29-19 48-46 57-27-9-46-28-46-57V48l46-17z"/>
+  <path class="pa" d="M110 42l35 13v22c0 22-13 38-35 47-22-9-35-25-35-47V55l35-13z"/>
+  <g fill="none" stroke-width="6" stroke-linecap="round" class="sa">
+    <path d="M87 76v14M98 65v36M110 57v52M122 67v32M133 75v16"/>
+  </g>
+</svg>

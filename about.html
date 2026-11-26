@@ -13,11 +13,11 @@ sitemap: true
 <header class="page-head">
   <div class="eyebrow">Method</div>
   <h1>About {{ site.threevoices.title }}</h1>
-  <p class="lede">{{ site.threevoices.title }} records how voice AI is applied in autism care, agriculture and space technologies, with a step‑by‑step account of how the systems work and how to prototype similar tools. Starting with the next issue, each domain will have three cases per month.</p>
+  <p class="lede">{{ site.threevoices.title }} records how voice AI is applied in autism care, agriculture and industrial field operations, with a step‑by‑step account of how the systems work and how to prototype similar tools. Every issue features verified, distinct use cases across the three domains.</p>
 </header>
 <div class="rules">
-  <div><h2>In scope</h2><p>Voice-AI systems where speech input or spoken output is central, used in autism care (Medical · Autism), agriculture, or space technologies. Text-first tools with optional voice features are out of scope.</p></div>
-  <div><h2>What counts as a source</h2><p>News outlets, peer‑reviewed journals, universities, space agencies and other public bodies, research institutes and non‑profits.</p></div>
+  <div><h2>In scope</h2><p>Voice-AI systems where speech input or spoken output is central, used in autism care (Medical · Autism), agriculture, or industrial and field operations. Text-first tools with optional voice features are out of scope.</p></div>
+  <div><h2>What counts as a source</h2><p>News outlets, peer‑reviewed journals, universities, government bodies, research institutes, standards organisations and non‑profits.</p></div>
   <div><h2>What is left out</h2><p>Vendor case studies, AI‑company blog posts, consulting reports and social‑media testimonials, even when they tell a good story.</p></div>
 </div>
 <section class="home-sec">
@@ -26,7 +26,7 @@ sitemap: true
   <div class="areas">{% for cat in site.data.threevoices.categories %}{% if cat.home %}
     {% assign n = 0 %}{% for i in site.data.threevoices.issues %}{% for c in site.data.threevoices.cases[i.slug] %}{% if c.category contains cat.key %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% endfor %}
     <div class="area">
-      <div class="spot">{% case cat.key %}{% when 'autism' %}{% include threevoices/illustrations/spot-autism.svg %}{% when 'agriculture' %}{% include threevoices/illustrations/spot-agriculture.svg %}{% when 'space' %}{% include threevoices/illustrations/spot-space.svg %}{% endcase %}</div>
+      <div class="spot">{% case cat.key %}{% when 'autism' %}{% include threevoices/illustrations/spot-autism.svg %}{% when 'agriculture' %}{% include threevoices/illustrations/spot-agriculture.svg %}{% when 'industrial' %}{% include threevoices/illustrations/spot-industrial.svg %}{% endcase %}</div>
       <span class="count">{{ n }} use case{% if n != 1 %}s{% endif %} so far</span>
       <h3>{{ cat.area_title }}</h3>
       <p>{{ cat.area_text }}</p>
@@ -36,9 +36,9 @@ sitemap: true
 <section class="caveats">
   <h2>The fine print</h2>
   <ul>
-    <li>Starting with the next issue, each issue covers three voice-AI use cases per domain, selected for strong sourcing and relevance that month.</li>
+    <li>Each issue selects distinct voice-AI use cases across autism care, agriculture and industrial operations, based on strong sourcing and relevance that month.</li>
     <li>Many projects are pilots. Where results are early, self‑reported or from one small study, the case says so in a “Read with care” note.</li>
-    <li>Health tools here, for autism or astronaut care, are research or pilot systems, not replacements for clinicians.</li>
+    <li>Health tools here are research or pilot systems, not replacements for clinicians. Industrial prototypes require operator verification and must never bypass machine or site safety controls.</li>
   </ul>
 </section>
 {% for issue in site.data.threevoices.issues %}

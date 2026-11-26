@@ -10,8 +10,43 @@ sitemap: true
   <h1>Archive</h1>
   <p class="lede">{{ site.threevoices.title }} is compiled monthly. Each issue keeps its own cases and implementation traces, so you can return to any month. A new issue is added at the start of each month.</p>
 </header>
-<div class="archive">{% for issue in site.data.threevoices.issues %}{% assign cases = site.data.threevoices.cases[issue.slug] %}{% capture dir %}/issues/{{ issue.slug }}/{% endcapture %}
-  <article class="cover">
+<div class="archive-tools">
+  <label for="issue-search">Search issues</label>
+  <input id="issue-search" type="search" placeholder="Month, title or domain">
+  <div class="archive-filters" aria-label="Filter archive by domain">
+    <button class="chip" type="button" data-domain="all" aria-pressed="true">All domains</button>
+    <button class="chip" type="button" data-domain="autism" aria-pressed="false">Autism</button>
+    <button class="chip" type="button" data-domain="agriculture" aria-pressed="false">Agriculture</button>
+    <button class="chip" type="button" data-domain="industrial" aria-pressed="false">Industrial</button>
+  </div>
+  <script>
+  (function () {
+    var input = document.getElementById('issue-search');
+    var chips = Array.prototype.slice.call(document.querySelectorAll('.archive-filters .chip'));
+    var covers = Array.prototype.slice.call(document.querySelectorAll('.cover'));
+    var activeDomain = 'all';
+    function filter() {
+      var query = (input.value || '').trim().toLowerCase();
+      covers.forEach(function (cover) {
+        var text = cover.getAttribute('data-search');
+        var textMatch = !query || text.indexOf(query) !== -1;
+        var domainMatch = activeDomain === 'all' || text.indexOf(activeDomain) !== -1;
+        cover.hidden = !(textMatch && domainMatch);
+      });
+    }
+    input.addEventListener('input', filter);
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        activeDomain = chip.getAttribute('data-domain');
+        chips.forEach(function (item) { item.setAttribute('aria-pressed', item === chip ? 'true' : 'false'); });
+        filter();
+      });
+    });
+  })();
+  </script>
+</div>
+<div class="archive">{% for issue in site.data.threevoices.issues %}{% assign cases = site.data.threevoices.cases[issue.slug] %}{% assign domains = '' %}{% for c in cases %}{% assign domains = domains | append: c.category | join: ' ' | append: ' ' %}{% endfor %}{% capture dir %}/issues/{{ issue.slug }}/{% endcapture %}
+  <article class="cover" data-search="{{ issue.title | downcase }} {{ issue.summary | downcase }} {{ issue.month | downcase }} {{ domains | downcase }}">
     <div class="cover-top"><span class="no">Issue No. {{ issue.number }}{% if forloop.first %} · Latest{% endif %}</span><span class="mo">{{ issue.month }}</span></div>
     <div class="cover-body">
       <h2>{{ issue.title }}</h2>

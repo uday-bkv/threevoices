@@ -31,6 +31,14 @@ layout: tv-default
     </div>
   </aside>
 </header>
+<nav class="issue-nav" aria-label="Monthly issue navigation">
+  {% assign issue_index = 0 %}
+  {% for i in site.data.threevoices.issues %}{% if i.slug == page.issue %}{% assign issue_index = forloop.index0 %}{% endif %}{% endfor %}
+  {% assign older_index = issue_index | plus: 1 %}
+  {% assign newer_index = issue_index | minus: 1 %}
+  {% if newer_index >= 0 %}{% assign newer_issue = site.data.threevoices.issues[newer_index] %}<a href="{{ '/issues/' | append: newer_issue.slug | append: '/how-it-works.html' | relative_url }}">← {{ newer_issue.month }}</a>{% endif %}
+  {% if older_index < site.data.threevoices.issues.size %}{% assign older_issue = site.data.threevoices.issues[older_index] %}<a href="{{ '/issues/' | append: older_issue.slug | append: '/how-it-works.html' | relative_url }}">{{ older_issue.month }} →</a>{% endif %}
+</nav>
 <div class="split">
   <div class="scen-list" role="tablist" aria-orientation="vertical" aria-label="Scenarios">
     <div class="list-label">Scenarios</div>

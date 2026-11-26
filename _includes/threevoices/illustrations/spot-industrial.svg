@@ -1,0 +1,10 @@
+<svg class="ill" viewBox="0 0 220 150" role="img" aria-label="Industrial worker using a hands-free voice assistant">
+  <rect class="bg" x="18" y="18" width="184" height="114" rx="16"/>
+  <circle class="pa" cx="82" cy="58" r="17"/>
+  <path class="acc" d="M54 124c3-28 13-42 28-42s25 14 28 42H54z"/>
+  <rect class="ink" x="112" y="46" width="78" height="66" rx="8"/>
+  <g fill="none" stroke-linecap="round" class="sp">
+    <path d="M126 79h4M136 70v18M146 62v34M156 68v22M166 74v10M176 79h4"/>
+  </g>
+  <circle cx="151" cy="94" r="4" class="mk"/>
+</svg>

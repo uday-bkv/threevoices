@@ -12,7 +12,7 @@
       {% case c.category[0] %}
         {% when 'autism' %}{% include threevoices/illustrations/spot-autism.svg %}
         {% when 'agriculture' %}{% include threevoices/illustrations/spot-agriculture.svg %}
-        {% when 'space' %}{% include threevoices/illustrations/spot-space.svg %}
+        {% when 'industrial' %}{% include threevoices/illustrations/spot-industrial.svg %}
       {% endcase %}
     </div>
   </div>
@@ -23,6 +23,11 @@
     <div class="signal-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   </div>
   {% endif %}
+  <div class="evidence-label">
+    <span class="stamp">{{ c.stamp }}</span>
+    <span>Evidence: reported system</span>
+    <span>Prototype: recommendation</span>
+  </div>
   <details class="guide-disclosure at-a-glance">
     <summary><span>Case facts</span><span class="disclosure-meta">{{ t.facts.size }} points</span></summary>
     <dl class="facts">{% for f in t.facts %}<div class="fact-card"><dt><span class="fact-number" aria-hidden="true">{{ forloop.index | prepend: '0' }}</span>{{ f.label }}</dt><dd>{{ f.text }}</dd></div>{% endfor %}</dl>

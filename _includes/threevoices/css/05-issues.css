@@ -1,5 +1,9 @@
 /* Issues: archive covers. */
 .archive { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 20px; padding-block: 32px 0; }
+.archive-tools { display: grid; gap: 10px; padding-block: 24px 0; }
+.archive-tools label { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.archive-tools input { width: min(100%, 520px); border: 1px solid var(--rule); border-radius: 999px; background: var(--sheet); color: var(--ink); padding: 10px 14px; font: inherit; }
+.archive-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .cover { background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; display: grid; }
 .cover-top { background: var(--accent); color: var(--paper); padding: 22px 24px 20px; display: grid; gap: 6px; }
 .cover-top .no { font-family: var(--mono); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }

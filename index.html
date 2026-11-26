@@ -1,7 +1,7 @@
 ---
 layout: tv-default
 nav: home
-description: Voice-AI use cases and technical implementation guides in autism care, agriculture and space, compiled monthly.
+description: Voice-AI use cases and technical implementation guides in autism care, agriculture and industrial operations, compiled monthly.
 permalink: /
 sitemap: true
 ---
@@ -12,7 +12,7 @@ sitemap: true
 <section class="home-hero">
   <div class="copy">
     <h1>Voice AI, <em>applied</em></h1>
-    <p class="lede">Each month, three real voice-AI use cases from each of three domains: autism care, agriculture and space, with tools and technical implementation guides.</p>
+    <p class="lede">Each month, we feature real voice-AI use cases from autism care, agriculture and industrial operations, alongside tools and technical implementation guides.</p>
     <div class="btns">
       <a class="btn primary" href="{{ latest_dir | append: 'cases.html' | relative_url }}">Read this month's cases</a>
       <a class="btn ghost" href="{{ latest_dir | append: 'how-it-works.html' | relative_url }}">How they work</a>
@@ -34,9 +34,8 @@ sitemap: true
               {% case cat.key %}
                 {% when 'autism' %}{% include threevoices/illustrations/spot-autism.svg %}
                 {% when 'agriculture' %}{% include threevoices/illustrations/spot-agriculture.svg %}
-                {% when 'space' %}{% include threevoices/illustrations/spot-space.svg %}
+                {% when 'industrial' %}{% include threevoices/illustrations/spot-industrial.svg %}
               {% endcase %}
-              <span class="domain-count">{{ category_cases.size }} cases</span>
             </div>
             <div class="domain-content">
               <h3>{{ cat.area_title }}</h3>

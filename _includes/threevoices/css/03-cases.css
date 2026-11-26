@@ -4,6 +4,8 @@
 .rules p { margin: 0; color: var(--muted); font-size: .97rem; }
 nav.filters { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--paper); padding-block: 14px; border-bottom: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 nav.filters span { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.evidence-label { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font-family: var(--mono); font-size: .72rem; color: var(--muted); }
+.evidence-label > span:not(.stamp) { border-left: 1px solid var(--rule); padding-left: 12px; }
 .chip { font-family: var(--mono); font-size: .82rem; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink);
   padding: 6px 12px; border-radius: 999px; cursor: pointer; }
 .chip:hover { border-color: var(--accent); }

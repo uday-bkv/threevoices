@@ -45,10 +45,10 @@ h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--m
 .domain-card { --domain-accent: var(--accent); display: grid; grid-template-rows: 150px 1fr; min-width: 0; overflow: hidden; border: 1px solid var(--rule); border-radius: 12px; background: var(--sheet); }
 .domain-autism { --domain-accent: var(--r-expert); }
 .domain-agriculture { --domain-accent: var(--r-person); }
-.domain-space { --domain-accent: var(--accent); }
+.domain-industrial { --domain-accent: var(--accent); }
 .domain-art { position: relative; display: grid; place-items: center; padding: 14px; background: var(--accent-soft); border-bottom: 3px solid var(--domain-accent); }
 .domain-art svg { display: block; width: 100%; max-width: 250px; height: auto; }
-.domain-count { position: absolute; top: 12px; right: 12px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper); color: var(--domain-accent); font-family: var(--mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; }
+.domain-case-no { color: var(--domain-accent); font-family: var(--mono); font-size: .7rem; font-weight: 500; padding-top: 2px; }
 .domain-content { display: grid; align-content: start; gap: 10px; padding: 18px 20px 20px; }
 .domain-content h3 { margin: 0; color: var(--domain-accent); font-family: var(--display); font-size: 1.25rem; font-weight: 800; line-height: 1.15; }
 .domain-content > p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.45; }
@@ -56,7 +56,6 @@ h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--m
 .domain-case-list li { border-top: 1px solid var(--rule); }
 .domain-case-list a { display: grid; grid-template-columns: 24px minmax(0, 1fr) 16px; gap: 8px; align-items: start; padding: 10px 0; color: var(--ink); font-size: .88rem; font-weight: 600; line-height: 1.35; text-decoration: none; }
 .domain-case-list a:hover span:nth-child(2) { color: var(--domain-accent); text-decoration: underline; text-underline-offset: 3px; }
-.domain-case-no { color: var(--domain-accent); font-family: var(--mono); font-size: .7rem; font-weight: 500; padding-top: 2px; }
 .domain-case-arrow { color: var(--domain-accent); text-align: right; }
 .recent-months { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: .78rem; }
 .recent-months > span { margin-right: 4px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }

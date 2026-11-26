@@ -1,5 +1,5 @@
 # Issue No. 01 · October 2026 · Founding issue
-# One conversational AI use case per domain: autism care, agriculture, space technologies.
+# One conversational AI use case per domain: autism care, agriculture, industrial operations.
 - id: c01
   category:
   - autism
@@ -136,68 +136,79 @@
       text: PostgreSQL or Airtable, Open-Meteo for weather, and farm-software APIs where available
 - id: c03
   category:
-  - space
-  use_case: Medical assistant for astronauts
-  place: USA · Low Earth orbit
-  new: true
-  reported: 2 October 2026
-  figure: 88%
-  figure_note: accuracy on physician-graded ankle-injury test cases
-  headline: NASA is building a talking medical assistant for crews far from a doctor
-  who: Future crews on long missions, reported as SpaceX Crew‑13 launched to the space station on 1 October
+  - industrial
+  use_case: LLM and XR industrial guidance
+  place: European industrial pilot research
+  new: false
+  reported: 7 April 2025
+  figure: XR prototype
+  figure_note: The 2025 conference paper describes early industrial implementations, not a production factory deployment.
+  headline: Researchers explored voice-guided XR help for industrial technicians
+  who: University and industrial research teams in robotic assembly and infrastructure maintenance
   paragraphs:
-  - Far from Earth, a crew may need medical guidance before a doctor can respond. NASA's Human Research Program and Google are developing the Crew Medical Officer Digital Assistant to explore that challenge.
-  - In the proposed workflow, an astronaut describes symptoms by voice or text and can add an image. The assistant returns a structured assessment with possible diagnoses and treatment guidance. In simulated, physician-graded cases, reported accuracy was 88% for ankle injuries, 80% for ear pain and 74% for flank pain. These results do not make it a flight-ready medical device.
-  quote: ''
-  care: It is not a cleared medical device, and NASA has announced no date for using it in flight. The accuracy figures come from simulated exam cases.
-  stamp: News
+  - Industrial technicians can lose time looking up instructions or contacting a remote expert. A 2025 conference paper proposes an XR and voice system that retrieves approved domain knowledge and guides a worker through a task.
+  - The architecture combines an LLM chat engine, retrieval-augmented generation and hands-free XR interaction. Early examples include robotic assembly, smart infrastructure maintenance and aerospace component servicing.
+  quote: ""
+  care: This is an early research system. Its proposed benefits do not establish safety, reliability or productivity in a live factory or field environment.
+  stamp: Research
   links:
-  - label: Travelers Today, 2 Oct 2026
-    url: https://www.travelerstoday.com/articles/61069/20261002/spacex-crew-13-sets-us-speed-record-while-bringing-ai-diagnostic-tools-space-station.htm
+  - label: arXiv paper, 7 Apr 2025
+    url: https://arxiv.org/abs/2504.05527
+  - label: IEEE DCOSS-IoT conference record
+    url: https://doi.org/10.1109/DCOSS-IoT65416.2025.00158
   trace:
-    title: A spoken clinical assistant for the crew medical officer
-    area: Space technologies
-    summary: Astronauts describe symptoms by voice, text or photo, and the assistant returns a structured assessment when Earth is out of reach.
+    title: Asking for hands-free industrial guidance
+    area: Industrial and field operations
+    summary: A technician speaks to an XR assistant that retrieves approved industrial knowledge and presents task guidance.
     facts:
     - label: The problem
-      text: On missions to the Moon or Mars, communication delays mean a doctor on Earth can't always help in time.
+      text: Technicians need current machine and maintenance knowledge while their hands are occupied or a subject expert is remote.
     - label: AI used
-      text: The Crew Medical Officer Digital Assistant (CMO-DA), from NASA's Human Research Program with Google.
+      text: The proposed architecture combines a retrieval-augmented LLM chat engine with an XR application and voice interaction.
     - label: What goes in
-      text: Speech, text and images describing symptoms.
+      text: A spoken natural-language question plus relevant task or machine context.
     - label: What comes out
-      text: Possible diagnoses and treatment guidance in a structured format.
+      text: A spoken or on-screen response grounded in domain-specific industrial knowledge.
     - label: Who checks it
-      text: Physicians graded its answers on standard exam-style test cases.
-    - label: Status
-      text: Not a cleared medical device, and no flight date announced.
+      text: Operators and maintenance specialists retain responsibility for confirming approved procedures.
+    - label: How we know
+      text: A conference paper describes the architecture, retrieval evaluation and early demonstrations across industrial use cases.
     steps:
     - role: person
-      text: For example, a crew member with ankle pain describes what happened, by voice or text.
-    - role: person
-      text: They add a photo of the swelling.
+      text: A technician asks a spoken question while working on a machine or following a repair procedure.
     - role: ai
-      text: The assistant combines speech, text and image into a structured assessment.
+      text: The XR application retrieves relevant approved guidance and prepares a context-aware response.
     - role: ai
-      text: It suggests likely diagnoses and treatment steps the crew medical officer can follow.
+      text: The assistant presents the answer in XR or by speech while the worker remains hands-free.
     - role: expert
-      text: In testing, physicians graded each assessment against standard exam cases.
+      text: The worker compares the guidance with the approved procedure and confirms the next safe action.
     - role: outcome
-      text: 88% accuracy for ankle injuries, 80% for ear pain and 74% for flank pain in testing.
-    worked: Accepting voice, text and images lets an astronaut describe a problem naturally, without medical vocabulary.
-    limits: Simulated cases only, not a cleared device, and no deployment date.
+      text: The proposed workflow can reduce delays without removing the technician's operational judgment.
+    worked: Voice plus XR is useful when a worker cannot stop to type or repeatedly consult a manual.
+    limits: Early demonstrations do not establish deployment safety, recognition reliability or quantified productivity gains.
     github_url: ""
     demo_url: ""
     sources:
-    - label: Travelers Today
-      url: https://www.travelerstoday.com/articles/61069/20261002/spacex-crew-13-sets-us-speed-record-while-bringing-ai-diagnostic-tools-space-station.htm
-    clinical: true
+    - label: arXiv conference paper
+      url: https://arxiv.org/abs/2504.05527
+    - label: IEEE conference DOI
+      url: https://doi.org/10.1109/DCOSS-IoT65416.2025.00158
+    clinical: false
     tools:
-    - label: Models
-      text: Multimodal models (Gemini, GPT‑4o, Claude), or open models such as MedGemma for offline experiments
-    - label: Offline running
-      text: llama.cpp or Ollama on a laptop, since a crew may have no connection
-    - label: Practice cases
-      text: Exam-style medical question sets such as MedQA, plus your own OSCE-style scenarios
-    - label: Speech
-      text: Whisper for voice input and Piper for spoken output
+    - label: Speech capture
+      text: Use a noise-resistant headset microphone with push-to-talk and a visible active-listening state.
+    - label: Retrieval
+      text: Index approved manuals and work instructions with citations, document versions and access controls.
+    - label: Conversation engine
+      text: Use a bounded RAG and tool-orchestration layer rather than open-ended operational commands.
+    - label: XR interface
+      text: Show the retrieved step on a tablet or headset with a manual fallback and explicit stop control.
+    build_steps:
+    - title: Choose a read-only task
+      detail: Start with locating or summarising an approved manual step; prohibit machine control or bypass of safety procedures.
+    - title: Build voice retrieval
+      detail: Capture noisy headset audio, confirm ambiguous terms and retrieve only current approved documents.
+    - title: Present and verify
+      detail: Show the exact source passage and require technician review before any maintenance action.
+    - title: Test in the work environment
+      detail: Evaluate recognition under machinery noise and interruptions, including unfamiliar questions and missing documents.

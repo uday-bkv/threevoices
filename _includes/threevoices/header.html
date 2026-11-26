@@ -6,11 +6,36 @@
 {% capture latest_cases %}/issues/{{ latest.slug }}/cases.html{% endcapture %}
 {% capture latest_how %}/issues/{{ latest.slug }}/how-it-works.html{% endcapture %}
 <header class="site-head">
-  <a class="brand" href="{{ '/' | relative_url }}">{% include threevoices/illustrations/logo.svg %}{{ site.threevoices.title }}<small>{{ site.threevoices.tagline }}</small></a>
+  <a class="brand" href="{{ '/' | relative_url }}">{% include threevoices/illustrations/logo.svg %}{{ site.threevoices.title }}{% if site.threevoices.tagline != "" %}<small aria-label="{{ site.threevoices.tagline }}">{{ site.threevoices.tagline }}</small>{% endif %}</a>
   <nav class="site-nav" aria-label="Site">
     <a href="{{ '/' | relative_url }}"{% if nav == 'home' %} aria-current="page"{% endif %}>Home</a>
     <a href="{{ latest_how | relative_url }}"{% if nav == 'how' %} aria-current="page"{% endif %}>How it works</a>
     <a href="{{ '/archive.html' | relative_url }}"{% if nav == 'archive' %} aria-current="page"{% endif %}>Archive</a>
     <a href="{{ '/about.html' | relative_url }}"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
   </nav>
+  <details class="mobile-menu">
+    <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+    <nav class="mobile-nav" aria-label="Mobile site">
+      <a href="{{ '/' | relative_url }}"{% if nav == 'home' %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ latest_how | relative_url }}"{% if nav == 'how' %} aria-current="page"{% endif %}>How it works</a>
+      <a href="{{ '/archive.html' | relative_url }}"{% if nav == 'archive' %} aria-current="page"{% endif %}>Archive</a>
+      <a href="{{ '/about.html' | relative_url }}"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
+    </nav>
+  </details>
 </header>
+<script>
+  (function () {
+    var menu = document.querySelector('.mobile-menu');
+    if (!menu) return;
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { menu.removeAttribute('open'); });
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        menu.removeAttribute('open');
+        var summary = menu.querySelector('summary');
+        if (summary) summary.focus();
+      }
+    });
+  }());
+</script>

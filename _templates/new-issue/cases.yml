@@ -1,10 +1,10 @@
 # Copy to _data/threevoices/cases/YYYY-MM.yml.
-# Each new issue has exactly nine entries: three per domain.
-# IDs c01-c03 = autism, c04-c06 = agriculture, c07-c09 = space.
+# Each new issue has exactly three entries: one per domain.
+# IDs c01 = autism, c02 = agriculture, c03 = industrial operations.
 # Only include real use cases where speech input or spoken output is central, not an optional feature.
 # Give each case a trace.build_steps list with 4-6 {title, detail} implementation steps.
 - id: c01
-  category: [autism]            # one of: autism, agriculture, space
+  category: [autism]            # one of: autism, agriculture, industrial
   use_case: Short voice-AI use case label
   new: true                     # reported in this issue's month
   reported: 1 November 2026

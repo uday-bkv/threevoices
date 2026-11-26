@@ -9,8 +9,8 @@
   home: true
   area_title: Agriculture
   area_text: Voice assistants that keep farm records and give crop and livestock advice in farmers' own languages.
-- key: space
-  label: Space technologies
+- key: industrial
+  label: Industrial and field operations
   home: true
-  area_title: Space technologies
-  area_text: Voice-AI assistants that support astronauts and make Earth-observation knowledge easier to access by speech.
+  area_title: Industrial and field operations
+  area_text: Hands-free voice assistants for manufacturing, logistics, utilities and field repair.

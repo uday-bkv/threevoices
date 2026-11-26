@@ -30,6 +30,8 @@
     });
   });
   var h = (location.hash || '').replace('#', '');
-  if (h) select(h, false, false);
+  if (h) {
+    if (!select(h, false, false)) select(tabs[0].getAttribute('data-id'), false, false);
+  }
   window.addEventListener('hashchange', function () { select(location.hash.replace('#', ''), false, false); });
 })();

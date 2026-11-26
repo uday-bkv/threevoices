@@ -9,6 +9,37 @@ layout: tv-default
   <p class="lede">{{ issue.summary }}</p>
   <div class="ledger"><span>{{ issue.compiled }}</span><span><b>{{ cases.size }}</b> cases</span></div>
 </header>
+<nav class="issue-nav" aria-label="Monthly issue navigation">
+  {% assign issue_index = 0 %}
+  {% for i in site.data.threevoices.issues %}{% if i.slug == page.issue %}{% assign issue_index = forloop.index0 %}{% endif %}{% endfor %}
+  {% assign older_index = issue_index | plus: 1 %}
+  {% assign newer_index = issue_index | minus: 1 %}
+  {% if newer_index >= 0 %}{% assign newer_issue = site.data.threevoices.issues[newer_index] %}<a href="{{ '/issues/' | append: newer_issue.slug | append: '/cases.html' | relative_url }}">← {{ newer_issue.month }}</a>{% endif %}
+  {% if older_index < site.data.threevoices.issues.size %}{% assign older_issue = site.data.threevoices.issues[older_index] %}<a href="{{ '/issues/' | append: older_issue.slug | append: '/cases.html' | relative_url }}">{{ older_issue.month }} →</a>{% endif %}
+</nav>
+<nav class="filters" aria-label="Filter cases">
+  <span>Filter</span>
+  <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+  <button class="chip" type="button" data-filter="autism" aria-pressed="false">Autism</button>
+  <button class="chip" type="button" data-filter="agriculture" aria-pressed="false">Agriculture</button>
+  <button class="chip" type="button" data-filter="industrial" aria-pressed="false">Industrial</button>
+</nav>
 <main class="cases" id="cases">
 {% for c in cases %}{% include threevoices/case-record.html %}{% endfor %}
 </main>
+<script>
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.filters .chip'));
+  var cases = Array.prototype.slice.call(document.querySelectorAll('.case'));
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var filter = chip.getAttribute('data-filter');
+      chips.forEach(function (item) { item.setAttribute('aria-pressed', item === chip ? 'true' : 'false'); });
+      cases.forEach(function (item) {
+        if (filter !== 'all') item.hidden = item.getAttribute('data-cat').split(' ').indexOf(filter) === -1;
+        else item.hidden = false;
+      });
+    });
+  });
+})();
+</script>
